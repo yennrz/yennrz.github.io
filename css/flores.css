@@ -63,11 +63,23 @@ body {
   transform: translateX(800px) scale(0.5);
 }
 
+.flower {
+  position: absolute;
+  bottom: 10vmin;
+  transform-origin: bottom center;
+  z-index: 10;
+  --fl-speed: 0.8s;
+}
 
 @media only screen and (max-width: 700px) {
   .flowers {
-        transform: scale(0.8);
+    transform: scale(0.8);
   }
+
+  .flowers {
+    bottom: 15vmin;
+  }
+
   .flowers__2, .flowers__3, .flowers__4, .flowers__5, .flowers__6, .flowers__7 {
     display: none;
   }
@@ -98,7 +110,7 @@ body {
   .flowers {
     transform: scale(0.4);
   }
-  
+
   .flowers__2 {
     transform: translateX(-180px) scale(0.35);
   }
@@ -157,13 +169,7 @@ body {
 }
 }
 
-.flower {
-  position: absolute;
-  bottom: 10vmin;
-  transform-origin: bottom center;
-  z-index: 10;
-  --fl-speed: 0.8s;
-}
+
 .flower--1 {
   -webkit-animation: moving-flower-1 4s linear infinite;
   animation: moving-flower-1 4s linear infinite;
